@@ -1,19 +1,22 @@
 /*
-2
-3	4
-4	5	6
-7	8	9	10
+0	1	1	2
+3	5	8
+13	21	
+34
 */
 #include<stdio.h>
 void main(){
 	int rows;
+	int a=0,b=1,sum=0;
 	printf("Enter rows:");
 	scanf("%d",&rows);
 	for(int i=1;i<=rows;i++){
-		int num=1+i;
-		for(int j=1;j<=i;j++){
-			printf("%d\t",num);
-			num =num+1;
+
+		for(int j=rows;j>=i;j--){
+			printf("%d\t",sum);
+			a=b;
+			b=sum;
+			sum=a+b;
 		}
 		printf("\n");
 	}

@@ -1,8 +1,8 @@
 /*
-2
-3	4
-4	5	6
-7	8	9	10
+a
+b	B
+c	C	c
+d	D	d	D
 */
 #include<stdio.h>
 void main(){
@@ -10,10 +10,14 @@ void main(){
 	printf("Enter rows:");
 	scanf("%d",&rows);
 	for(int i=1;i<=rows;i++){
-		int num=1+i;
+		char ch1='a'+i-1;
+		char ch2='A'+i-1;
 		for(int j=1;j<=i;j++){
-			printf("%d\t",num);
-			num =num+1;
+			if(j%2!=0){
+				printf("%c\t",ch1);
+			}else{
+				printf("%c\t",ch2);
+			}
 		}
 		printf("\n");
 	}
